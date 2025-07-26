@@ -1,0 +1,104 @@
+/* common_wm.css (웹/모바일 공통 초기화 + 변수) */
+
+/* 공통 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  cursor: default;
+}
+
+/* 태그 리셋 */
+html, body, div, span, iframe, object, embed, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, a, abbr, address, b, bdo, blockquote, cite, code, del, dfn, em, i, ins, kbd, q, s, samp, strong, sub, sup, u, var, img, map, area, form, fieldset, legend, input, textarea, select, button, label, keygen, table, caption, thead, tbody, tfoot, tr, th, td, article, aside, audio, bdi, canvas, datalist, details, dialog, figcaption, figure, footer, header, main, mark, menu, menuitem, meter, nav, output, progress, section, rp, rt, ruby, summary, time, video, wbr, hr {margin: 0;padding: 0;}
+
+/* 공통 변수 */
+:root {
+  --primary001: #3D53E3;
+  --secondary001: #2C3485;
+  --secondary002: #D0DEFC;
+
+  --gray700: #111111;
+  --gray600: #6B6E81;
+  --gray500: #B3B7C8;
+  --gray400: #D7D9E4;
+  --gray300: #EEF0F7;
+  --gray200: #F8F9FD;
+  --gray100: #FFFFFF;
+
+  --sys-active: #3D53E3;
+  --sys-error: #EC5047;
+  --sys-selbg1: #EDF0FF;
+  --sys-selbg2: #EDF0FF;
+  
+  --font-size-base: 16px; /* 기본값: 1rem = 16px */
+
+  /* rem 배율로 쓸 사이즈 변수 */
+  --size-56: calc(var(--font-size-base) * 3.5);
+  --size-48: calc(var(--font-size-base) * 3);
+  --size-36: calc(var(--font-size-base) * 2.25);
+  --size-32: calc(var(--font-size-base) * 2);
+  --size-24: calc(var(--font-size-base) * 1.5);
+  --size-22: calc(var(--font-size-base) * 1.375);
+  --size-20: calc(var(--font-size-base) * 1.25);
+  --size-18: calc(var(--font-size-base) * 1.125);
+  --size-16: calc(var(--font-size-base) * 1);
+  --size-15: calc(var(--font-size-base) * 0.9375);
+  --size-14: calc(var(--font-size-base) * 0.875);
+  --size-13: calc(var(--font-size-base) * 0.8125);
+  --size-12: calc(var(--font-size-base) * 0.75);
+  --size-11: calc(var(--font-size-base) * 0.6875);
+  --size-10: calc(var(--font-size-base) * 0.625);
+  --size-08: calc(var(--font-size-base) * 0.5);
+  --size-06: calc(var(--font-size-base) * 0.375);
+  --size-04: calc(var(--font-size-base) * 0.25);
+  --size-02: calc(var(--font-size-base) * 0.125);
+
+  --lh-150: 150%;
+  --lh-140: 140%;
+  --lh-130: 130%;
+  --lh-120: 120%;
+  
+}
+
+/* html, body 공통 */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Pretendard', 'Noto Sans KR', 'Roboto', sans-serif;
+  line-height: var(--lh-130);
+  color: var(--gray700);
+  background-color: var(--gray200);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  -webkit-touch-callout: none;
+  -ms-text-size-adjust: 100%;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: none;
+}
+
+.hidden {height: 100%;min-height: 100%;overflow: hidden !important;touch-action: none;}
+
+
+
+
+
+
+/* 📱 모바일 전용 오버라이드 */
+@media screen and (max-width: 768px) {
+  body {
+    background-color:var(--gray100);
+  }
+}
